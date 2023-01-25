@@ -7,89 +7,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link type="text/css" rel="stylesheet" href="assets/materialize.min.css" media="screen,projection" />
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <title>SimpliGame</title>
 </head>
-
 <body>
-    <nav class="white" role="navigation">
-        <div class="nav-wrapper container">
-            <a id="logo-container" href="#" class="brand-logo">Logo</a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="#">Navbar Link</a></li>
-            </ul>
-
-            <ul id="nav-mobile" class="sidenav">
-                <li><a href="#">Navbar Link</a></li>
-            </ul>
-            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        </div>
-    </nav>
-    <div id="index-banner" class="parallax-container">
-        <div class="section no-pad-bot">
-            <div class="container">
-                <br><br>
-                <h1 class="header center teal-text text-lighten-2">SimpliGame</h1>
-                <div class="row center">
-                    <div class="row">
-                        <form class="col s12">
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <textarea id="textarea1" class="materialize-textarea"></textarea>
-                                    <label for="textarea1">Enter the name of the game you want to view</label>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <h5 class="header col s12 light">Greatness Awaits!
-                    </h5>
-                </div>                
-                <div class="row center">
-                    <a href="http://materializecss.com/getting-started.html" id="download-button"
-                    class="btn-large waves-effect waves-light teal lighten-1">Let's A Go!</a>
+    <div class="custom-nav">
+        <h1 class="center custom-h1">SimpliGame</h1>
+        <img src="assets/images/t-pose-mario.png" width="20%" class="center-align">
+    </div>
+    <main>
+    <form class="row">
+        <input type="text" id="game-search" class="col offset-m2 m8"></input>
+        <label id="search-label" for="search-game" class="col offset-m2 m8"> Enter the name of the game you want to view</label>
+        <button id="search-btn" class="custom-button btn-large waves-effect col offset-m6">Let's a go!</button>
+    </form>      
+    <br><br>
+    <div id="search-results">
+        <div class="row">
+            <div class="card custom-background">
+                <div class="card col offset-m1 m10 custom-card hover">
+                    <h2 class="custom-h2 col m12">Card Title</h2>
+                    <p class="col m7">Description</p>
+                    <p class="col m7"><span class="custom-span">Platform: </span>Wiiu</p>
+                    <p class="col m7"><span class="custom-span">genres: </span> genre</p>
+                    <p class="col m7">Review</p>
+                    <img src="assets/images/images.jpg">
+                    <a class="col m12">More info</a>
                 </div>
-                <br><br>
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col s12 offset-m1 m10">
-            <div class="card custom-card">
-                <div class="card-content">
-                    <h2 class="custom-title">Card Title</h2>
-                    <p class="col m7">I am a very simple card. I am good at containing small bits of information.I am convenient because I require little markup to use effectively.</p>
-                    
-                    <p class="col m7"><span class="custom-span">Platform:</span> wiiu.</p>
-                    <p class="col m7">genre.</p>
-                    <img src="/assets/images.jpg">
-                </div>
-                <div class="card-action">
-                    <a href="#">more info</a>
-                </div>
-            </div>
-        </div>
-        <div class="col offset-m9 m1">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col s12 offset-m1 m10">
-            <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                    <span class="card-title">Card Title</span>
-                    <p class="col m7">I am a very simple card. I am good at containing small bits of information.I am convenient because I require little markup to use effectively.</p>
-                    <p class="col m7">platform.</p>
-                    <p class="col m7">genre.</p>
-                    <img src="/assets/images.jpg">
-                </div>
-                <div class="card-action">
-                    <a href="#">more info</a>
-                </div>
-            </div>
-        </div>
     </main>
-
     <footer class="page-footer teal">
         <div class="container">
             <div class="row">
@@ -98,8 +47,6 @@
                     <p class="grey-text text-lighten-4">We are a team of college students working on this project like
                         it's our full time job. Any amount would help support and continue development on this project
                         and is greatly appreciated.</p>
-
-
                 </div>
                 <div class="col l3 s12">
                     <h5 class="white-text">Settings</h5>

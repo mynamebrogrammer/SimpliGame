@@ -1,5 +1,36 @@
 :root {
  --mario-red: #E52521;
+ --faded-red: #cc514f;
+ --mario-blue: #049cd8;  
+ --card-background: #3a4c53;
+ --background-color:  #eeeeee;
+}
+
+.custom-nav{
+    background-color: var(--background-color);
+}
+
+.custom-h1 {
+    color: var(--mario-red);
+    padding: 3%;
+}
+/* label focus color -- issues with the color */
+input[type=text]:focus + label {
+    color: #000;
+  }
+.custom-button{
+    background-color: var(--mario-red); 
+    color: var(--background-color);
+}
+.custom-button:hover{
+    background-color: var(--mario-red);
+    color: white;
+}
+.custom-button:focus{
+    background-color: var(--faded-red);
+    color: white;
+}
+.custom-h2{
  --mario-blue: #049cd8;  
  --card-background: #324c57;
  --card-text: #eeeeee; 
@@ -16,28 +47,14 @@
     color: var(--mario-blue);
 }
 .custom-card{
-    background-color: var(--card-background);
-    color: var(--card-text);
+    background-color:var(--card-background);
+    color: var(--background-color);
+    border-width: 4%;
     border-color: var(--mario-red);
 }
-.custom-background{
-    border-width: 3%;
-    padding: 2%;
+.custom-span{
+    font-weight: 700;
+}
+.custom-background {
     background-color: var(--mario-red);
-}
-.custom-link{
-    color: var(--mario-blue);
-    padding: 2%;
-}
-#search-button{
-    background-color: var(--mario-red);
-    color: var(--card-text);
-}
-
-/*issues fighting default*/
-#game-search, #custom-label{
-    border-bottom-color: var(--card-background);
-}
-#game-search:focus, #custom-label:focus{
-    border-bottom-color: var(--mario-red);
 }
