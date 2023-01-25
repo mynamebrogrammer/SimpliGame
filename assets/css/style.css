@@ -1,5 +1,36 @@
 :root {
  --mario-red: #E52521;
+ --faded-red: #cc514f;
+ --mario-blue: #049cd8;  
+ --card-background: #3a4c53;
+ --background-color:  #eeeeee;
+}
+
+.custom-nav{
+    background-color: var(--background-color);
+}
+
+.custom-h1 {
+    color: var(--mario-red);
+    padding: 3%;
+}
+/* label focus color -- issues with the color */
+input[type=text]:focus + label {
+    color: #000;
+  }
+.custom-button{
+    background-color: var(--mario-red); 
+    color: var(--background-color);
+}
+.custom-button:hover{
+    background-color: var(--mario-red);
+    color: white;
+}
+.custom-button:focus{
+    background-color: var(--faded-red);
+    color: white;
+}
+.custom-h2{
  --mario-blue: #049cd8;  
  --card-background: #324c57;
 }
@@ -12,4 +43,13 @@
 }
 .custom-card{
     background-color:var(--card-background);
+    color: var(--background-color);
+    border-width: 4%;
+    border-color: var(--mario-red);
+}
+.custom-span{
+    font-weight: 700;
+}
+.custom-background {
+    background-color: var(--mario-red);
 }
