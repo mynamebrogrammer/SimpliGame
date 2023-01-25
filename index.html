@@ -27,41 +27,64 @@
             <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         </div>
     </nav>
-    <div>
-        <h1 class="custom-h1 header center">SimpliGame</h1>
-        <form class="container row">
-            <input type="text" id="game-search" class="col m12 custom-input"></input>
-            <label for="game-search" id="custom-label">Enter the name of the game you want to view</label>
-            <br><br>
-            <button id="search-button" class="btn-large cwaves-effect waves-light col offset-m5">Let's A Go!</button>
-        </form>
-    </div>
-    <main id="search-results">
-        <div class="row">
-            <div class="col s12 offset-m1 m10 custom-background">
-                <div class="card custom-card hoverable">
-                    <div class="card-content">
-                        <h2 class="custom-title">Card Title</h2>
-                        <p class="col m7">I am a very simple card. I am good at containing small bits of information.I am convenient because I require little markup to use effectively.</p>          
-                        <p class="col m7 custom-span"><span class="custom-span">Platform:</span> wiiu.</p>
-                        <p class="col m7">genre.</p>
-                        <a href="#" class="col m7 custom-link">more info</a>
-                        <img src="assets/images.jpg">
+    <div id="index-banner" class="parallax-container">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <br><br>
+                <h1 class="header center teal-text text-lighten-2">SimpliGame</h1>
+                <div class="row center">
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                    <label for="textarea1">Enter the name of the game you want to view</label>
+                                </div>
+                            </div>
+                        </form>
                     </div>
+                    <h5 class="header col s12 light">Greatness Awaits!
+                    </h5>
+                </div>                
+                <div class="row center">
+                    <a href="http://materializecss.com/getting-started.html" id="download-button"
+                    class="btn-large waves-effect waves-light teal lighten-1">Let's A Go!</a>
+                </div>
+                <br><br>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 offset-m1 m10">
+            <div class="card custom-card">
+                <div class="card-content">
+                    <h2 class="custom-title">Card Title</h2>
+                    <p class="col m7">I am a very simple card. I am good at containing small bits of information.I am convenient because I require little markup to use effectively.</p>
+                    
+                    <p class="col m7"><span class="custom-span">Platform:</span> wiiu.</p>
+                    <p class="col m7">genre.</p>
+                    <img src="/assets/images.jpg">
+                </div>
+                <div class="card-action">
+                    <a href="#">more info</a>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col s12 offset-m1 m10 custom-background">
-                <div class="card custom-card hoverable">
-                    <div class="card-content">
-                        <h2 class="custom-title">Card Title</h2>
-                        <p class="col m7">I am a very simple card. I am good at containing small bits of information.I am convenient because I require little markup to use effectively.</p>          
-                        <p class="col m7 custom-span"><span class="custom-span">Platform:</span> wiiu.</p>
-                        <p class="col m7">genre.</p>
-                        <a href="#" class="col m7 custom-link">more info</a>
-                        <img src="assets/images.jpg">
-                    </div>
+        <div class="col offset-m9 m1">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 offset-m1 m10">
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">Card Title</span>
+                    <p class="col m7">I am a very simple card. I am good at containing small bits of information.I am convenient because I require little markup to use effectively.</p>
+                    <p class="col m7">platform.</p>
+                    <p class="col m7">genre.</p>
+                    <img src="/assets/images.jpg">
+                </div>
+                <div class="card-action">
+                    <a href="#">more info</a>
                 </div>
             </div>
         </div>
@@ -105,8 +128,7 @@
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="./assets/materialize.min.js"></script>
-    <script src="./assets/script.js"></script>
+    <script src=".//assets/Js/script.js"></script>
 </body>
 
 </html>
