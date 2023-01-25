@@ -18,8 +18,6 @@
 input[type=text]:focus + label {
     color: #000;
   }
-
-
 .custom-button{
     background-color: var(--mario-red); 
     color: var(--background-color);
@@ -33,6 +31,14 @@ input[type=text]:focus + label {
     color: white;
 }
 .custom-h2{
+ --mario-blue: #049cd8;  
+ --card-background: #324c57;
+}
+
+.custom-span{
+    font-weight: 700;
+}
+.custom-title {
     color: var(--mario-blue);
 }
 .custom-card{
