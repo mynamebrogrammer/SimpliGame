@@ -4,6 +4,7 @@
  --mario-blue: #049cd8;  
  --card-background: #3a4c53;
  --background-color:  #eeeeee;
+ --background-darker: #cecece;
 }
 
 .custom-nav{
@@ -57,4 +58,13 @@ input[type=text]:focus + label {
 }
 .custom-background {
     background-color: var(--mario-red);
+}
+
+.custom-footer{
+    background-color: var(--background-color);
+    color: var(--card-background);
+}
+
+li {
+    list-style: none;
 }
