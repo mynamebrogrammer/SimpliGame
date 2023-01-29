@@ -12,9 +12,9 @@
     <title>SimpliGame</title>
 </head>
 <body>
-    <div class="custom-nav">
-        <h1 class="center custom-h1">SimpliGame</h1>
-        <img src="assets/images/t-pose-mario.png" width="20%" class="center-align">
+    <div class="custom-nav row">
+        <h1 class="center custom-h1 col m8">SimpliGame</h1>
+        <img src="assets/images/t-pose-mario.png" width="20%">
     </div>
     <main>
     <form class="row">
@@ -25,8 +25,8 @@
     <br><br>
     <div id="search-results">
         
-        <!-- <div class="row">     --add some spans, 
-            <div class="card custom-background">
+        <!-- <div class="row"> 
+            <div class="col offset-m1 m10 custom-background">
                 <div class="card col offset-m1 m10 custom-card hover">
                     <h2 class="custom-h2 col m12">Card Title</h2>
                     <p class="col m7">Description</p>
@@ -34,46 +34,30 @@
                     <p class="col m7"><span class="custom-span">genres: </span> genre</p>
                     <p class="col m7">Review</p>
                     <img src="assets/images/images.jpg">
-                    <a class="col m12">More info</a>
+                    <a class="col m12 custom-link">More info</a>
                 </div>
             </div>
         </div> -->
+        <div id="koopa-victory-img" class="row hidden">
+            <img src="assets/images/koopa-dance.png" alt="Koopa Trooping victory dance" id="koopa-dance" class="col offset-m10">
+        </div>
     </div>
     </main>
-    <footer class="page-footer teal">
+        
+    <footer class="custom-footer row">
         <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Company Bio</h5>
-                    <p class="grey-text text-lighten-4">We are a team of college students working on this project like
-                        it's our full time job. Any amount would help support and continue development on this project
-                        and is greatly appreciated.</p>
-                </div>
-                <div class="col l3 s12">
-                    <h5 class="white-text">Settings</h5>
-                    <ul>
-                        <li><a class="white-text" href="#!">Link 1</a></li>
-                        <li><a class="white-text" href="#!">Link 2</a></li>
-                        <li><a class="white-text" href="#!">Link 3</a></li>
-                        <li><a class="white-text" href="#!">Link 4</a></li>
-                    </ul>
-                </div>
-                <div class="col l3 s12">
-                    <h5 class="white-text">Connect</h5>
-                    <ul>
-                        <li><a class="white-text" href="#!">Link 1</a></li>
-                        <li><a class="white-text" href="#!">Link 2</a></li>
-                        <li><a class="white-text" href="#!">Link 3</a></li>
-                        <li><a class="white-text" href="#!">Link 4</a></li>
-                    </ul>
-                </div>
-            </div>
+            <h3 class="center-align">Made by: Habib Maksoud & Anna Langford</h3>
+            <p>We are a team of college students working on this project like it's our full time job. Any amount of help and support to continue development on this project is greatly appreciated</p>
         </div>
-        <div class="footer-copyright">
-            <div class="container">
-                Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-            </div>
+        <div class="container row">
+            <h4 class="center-align">Made with:</h4>
+            <ul class="center-align">
+                <li class="col m4"><a href="#">GiantBomb API</a></li>
+                <li class="col m4"><a href="#">Wikipedia API</a></li>
+                <li class="col m4"><a href="#">Materialize CSS</a></li>
+            </ul>
         </div>
+        <p class="center-align">© 2023 Copyright</p>
     </footer>
 
 
