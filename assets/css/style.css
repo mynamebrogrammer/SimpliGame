@@ -1,7 +1,9 @@
 :root {
  --mario-red: #E52521;
- --faded-red: #cc514f;
  --mario-blue: #049cd8;  
+ --faded-red: #cc514f;
+ --mario-brown: #824C41; 
+ --mario-yellow: #FBD000;
  --card-background: #3a4c53;
  --background-color:  #eeeeee;
  --background-darker: #cecece;
@@ -32,9 +34,7 @@ input[type=text]:focus + label {
     color: white;
 }
 .custom-h2{
- --mario-blue: #049cd8;  
- --card-background: #324c57;
- --card-text: #eeeeee; 
+ color: var(--mario-yellow);  
 }
 .custom-h1{
     color: var(--mario-red); 
@@ -44,25 +44,31 @@ input[type=text]:focus + label {
 .custom-span{
     font-weight: 700;
 }
-.custom-title {
-    color: var(--mario-blue);
-}
 .custom-card{
     background-color:var(--card-background);
     color: var(--background-color);
     border-width: 4%;
     border-color: var(--mario-red);
 }
+.custom-link{
+    color:var(--mario-yellow)
+}
 .custom-span{
     font-weight: 700;
 }
 .custom-background {
-    background-color: var(--mario-red);
+    background-color: var(--mario-blue);
+    padding-left: 4%
 }
-
+.hidden{
+    display:none;
+}
+#koopa-dance{
+    width: 10%;
+}
 .custom-footer{
-    background-color: var(--background-color);
-    color: var(--card-background);
+    background-color: var(--mario-brown);
+    color: var(--background-color);
 }
 
 li {
