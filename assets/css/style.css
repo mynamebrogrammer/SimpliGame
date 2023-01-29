@@ -60,6 +60,9 @@ input[type=text]:focus + label {
     background-color: var(--mario-blue);
     padding-left: 4%
 }
+.custom-img{
+    width:min-content;
+}
 .hidden{
     display:none;
 }

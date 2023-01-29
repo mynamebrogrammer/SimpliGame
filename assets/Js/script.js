@@ -1,11 +1,21 @@
+var warningText = document.querySelector('#warning-text')
+var submit = document.querySelector("#search-btn");
+var searchResultsEl = document.querySelector("#search-results");
+var koopaCardEl = document.querySelector('#koopa-victory-img')
+
 var giantUrl = "https://www.giantbomb.com/api/";
 var giantKey = "52db97452523e0923604e9bf9b8a29db8a98e07e";
-var submit = document.getElementById("search-btn");
 
 function userSubmission(event) {
     event.preventDefault();
 
-    var searchInput = document.getElementById("game-search").value;
+    var searchInput = document.querySelector("#game-search").value;
+    if(!searchInput){
+        warningText.classList.remove("hidden")
+        return;
+    }else{
+        warningText.className = 'hidden'
+    }
 
     // this API only works with JQUERY...sigh
     // tried fetch()... did not work
@@ -20,63 +30,71 @@ function userSubmission(event) {
             // console.log('done');
         },
         success: function (data) {
+            clearPage();
             generateCards(data);
+            revealKoopa();
         }
-
     });
-
 }
+
 function generateCards(data) {
     var results = data.results;
     for (let i = 0; i < data.results.length; i++) {
         var cardRowEl = document.createElement("div");
-        cardRowEl.class = "row";
+        cardRowEl.className = 'row';
 
         var cardContEl = document.createElement("div");
-        cardContEl.class = "col offset-m1 m10 custom-background";
+        cardContEl.className = 'col offset-m1 m10 custom-background';
 
         var cardBodyEl = document.createElement("div");
-        cardBodyEl.class = "card col offset-m1 m10 custom-card hover"
-
+        cardBodyEl.className = "card col offset-m1 m10 custom-card hover"
 
         var cardTitleEl = document.createElement("h2");
-        cardTitleEl.class = "custom-h2 col m12";
+        cardTitleEl.className = "custom-h2 col m12";
         cardTitleEl.textContent = results[i].name;
         cardBodyEl.append(cardTitleEl);
+        
+        var cardImg = document.createElement("img");
+        //cardImg.setAttribute('src', '**this should be wikipedia path?**');
+        // cardImg.setAttribute('alt', 'image of '+results[i].name);
+        // cardImg.className = "col m5 custom-img"
+        // cardBodyEl.append(cardImg);
 
         var cardDescEl = document.createElement("p");
-        cardDescEl.class = "col m7";
-        
+        cardDescEl.className = "col m7";
+        if(!results[i].deck){
+            cardDescEl.innerHTML = "<span class='custom-span'> Uh oh! </span> There's no description for this game..."
+        } else {
             cardDescEl.textContent = results[i].deck;
+        }
+        //cardDescEl.innerHTML = results[i].description;
         
-            //cardDescEl.innerHTML = results[i].description;
-        
-
         cardBodyEl.append(cardDescEl);
 
         var cardPlatformEl = document.createElement("p");
-        cardPlatformEl.class = "col m7";
-        cardPlatformEl.textContent = results[i].platforms[0].name;
+        cardPlatformEl.className = "col m7";
+        if(!results[i].platforms[0].name){
+            cardPlatformEl.innerHTML = '<span class="custom-span">Platform: </span> N/A'
+        } else{
+            cardPlatformEl.innerHTML = '<span class="custom-span">Platform: </span>' + results[i].platforms[0].name;
+        }
         cardBodyEl.append(cardPlatformEl);
 
-        // if else for checking if game has a description
-
-        var cardImg = document.createElement("img");
-
-        var searchResultsEl = document.querySelector("#search-results");
         cardContEl.append(cardBodyEl)
-        console.log(cardContEl);
-        searchResultsEl.append(cardContEl);
-
-
+        cardRowEl.append(cardContEl)
+        searchResultsEl.append(cardRowEl);
+        
         //cardReview.textContent = data.results[i].
-
     }
-
 }
 
+function revealKoopa(){
+    koopaCardEl.classList.remove('hidden');
+}
+
+function clearPage() {
+    searchResultsEl.textContent = ''
+    document.querySelector("#game-search").value = '';
+}
 
 submit.addEventListener("click", userSubmission);
-
-
-
