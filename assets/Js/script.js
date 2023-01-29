@@ -29,9 +29,11 @@ function userSubmission(event) {
 function generateCards(data) {
     var results = data.results;
     for (let i = 0; i < data.results.length; i++) {
+        var cardRowEl = document.createElement("div");
+        cardRowEl.class = "row";
 
         var cardContEl = document.createElement("div");
-        cardContEl.class = "card custom-background";
+        cardContEl.class = "col offset-m1 m10 custom-background";
 
         var cardBodyEl = document.createElement("div");
         cardBodyEl.class = "card col offset-m1 m10 custom-card hover"
