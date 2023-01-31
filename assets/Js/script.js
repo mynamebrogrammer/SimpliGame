@@ -3,6 +3,7 @@ var submit = document.querySelector("#search-btn");
 var searchResultsEl = document.querySelector("#search-results");
 var koopaCardEl = document.querySelector('#koopa-victory-img')
 
+var finalResults = ''
 var giantUrl = "https://www.giantbomb.com/api/";
 var giantKey = "52db97452523e0923604e9bf9b8a29db8a98e07e";
 
@@ -30,24 +31,29 @@ function userSubmission(event) {
             // console.log('done');
         },
         success: function (data) {
+            finalResults = data.results
             clearPage();
             generateCards(data);
             revealKoopa();
         }
     });
+
 }
+
 
 function generateCards(data) {
     var results = data.results;
-    for (let i = 0; i < data.results.length; i++) {
+    for (let i = 0; i < results.length; i++) {
         var cardRowEl = document.createElement("div");
         cardRowEl.className = 'row';
-
+        
+        
         var cardContEl = document.createElement("div");
         cardContEl.className = 'col offset-m1 m10 custom-background';
-
+        
         var cardBodyEl = document.createElement("div");
         cardBodyEl.className = "card col offset-m1 m10 custom-card hover"
+        cardBodyEl.setAttribute('id', 'card-body')
 
         var cardTitleEl = document.createElement("h2");
         cardTitleEl.className = "custom-h2 col m12";
@@ -59,7 +65,7 @@ function generateCards(data) {
         // cardImg.setAttribute('alt', 'image of '+results[i].name);
         // cardImg.className = "col m5 custom-img"
         // cardBodyEl.append(cardImg);
-
+        
         var cardDescEl = document.createElement("p");
         cardDescEl.className = "col m7";
         if(!results[i].deck){
@@ -70,7 +76,7 @@ function generateCards(data) {
         //cardDescEl.innerHTML = results[i].description;
         
         cardBodyEl.append(cardDescEl);
-
+        
         var cardPlatformEl = document.createElement("p");
         cardPlatformEl.className = "col m7";
         if(!results[i].platforms[0].name){
@@ -80,6 +86,13 @@ function generateCards(data) {
         }
         cardBodyEl.append(cardPlatformEl);
 
+        var cardReviewEl = document.createElement("a"); 
+        cardReviewEl.className = "col m7 custom-link";
+        cardReviewEl.textContent = "Review"
+        var siteDetailUrl = results[i].site_detail_url;
+        cardReviewEl.setAttribute('href', siteDetailUrl+'user-reviews/');
+        cardBodyEl.append(cardReviewEl);
+        
         cardContEl.append(cardBodyEl)
         cardRowEl.append(cardContEl)
         searchResultsEl.append(cardRowEl);
