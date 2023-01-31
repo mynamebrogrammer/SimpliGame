@@ -2,6 +2,10 @@ var warningText = document.querySelector('#warning-text')
 var submit = document.querySelector("#search-btn");
 var searchResultsEl = document.querySelector("#search-results");
 var koopaCardEl = document.querySelector('#koopa-victory-img')
+var weatherDiv = document.querySelector('#weather-show')
+var weatherNowSpan = document.querySelector('#weather-now')
+var tempNowSpan = document.querySelector('#temp-now')
+var feelsNowSpan = document.querySelector('#feels-now')
 
 var finalResults = ''
 var giantUrl = "https://www.giantbomb.com/api/";
@@ -32,6 +36,7 @@ function userSubmission(event) {
         },
         success: function (data) {
             finalResults = data.results
+            hideWeather();
             clearPage();
             generateCards(data);
             revealKoopa();
@@ -100,9 +105,28 @@ function generateCards(data) {
         //cardReview.textContent = data.results[i].
     }
 }
+function displayWeather(){
+    var apiKey = 'a6e22ff5fd306121b7107074ca75c22a'
+    weatherApiUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=34.0537&lon=-118.2428&units=imperial&appid='+apiKey
+    fetch(weatherApiUrl)
+        .then(response => response.json())
+        .then(function(response){
+            console.log(response);
+            weatherNowSpan.textContent = response.weather[0].description
+            tempNowSpan.textContent = response.main.temp
+            feelsNowSpan.textContent = response.main.feels_like
+        })
+        .catch(err => console.error(err));
+}
+
+
 
 function revealKoopa(){
     koopaCardEl.classList.remove('hidden');
+}
+
+function hideWeather(){
+    weatherDiv.className = "hidden";
 }
 
 function clearPage() {
@@ -111,3 +135,5 @@ function clearPage() {
 }
 
 submit.addEventListener("click", userSubmission);
+
+displayWeather();

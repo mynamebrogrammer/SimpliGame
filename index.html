@@ -18,12 +18,18 @@
     </div>
     <main>
     <form class="row">
-        <p id="warning-text"class="col offset-m2 hidden">Please enter a valid game title</p>
+        <p id="warning-text" class="col offset-m2 hidden">Please enter a valid game title</p>
         <input type="text" id="game-search" class="col offset-m2 m8"></input>
         <label id="search-label" for="search-game" class="col offset-m2 m8"> Enter the name of the game you want to view</label>
         <button id="search-btn" class="custom-button btn-large waves-effect col offset-m6">Let's a go!</button>
     </form>      
     <br><br>
+    <div class="row custom-weather" id="weather-show">
+        <h3 class="col offset-m1 m11">The weather in LA is:</h2>
+        <p class="col offset-m1 m11">Weather: <span id="weather-now"></span></p>
+        <p class="col offset-m1 m11">Temperature: <span id="temp-now"></span>°F</p>
+        <p class="col offset-m1 m11">Feels Like: <span id="feels-now"></span>°F</p>
+    </div>
     <div id="search-results">
         <!-- <div class="row"> 
             <div class="col offset-m1 m10 custom-background">
@@ -46,11 +52,11 @@
         
     <footer class="custom-footer row">
         <div class="container">
-            <h3 class="center-align">Made by: Habib Maksoud & Anna Langford</h3>
+            <h4 class="center-align">Made by: Habib Maksoud & Anna Langford</h3>
             <p>We are a team of college students working on this project like it's our full time job. Any amount of help and support to continue development on this project is greatly appreciated</p>
         </div>
         <div class="container row">
-            <h4 class="center-align">Made with:</h4>
+            <h5 class="center-align">Made with:</h4>
             <ul class="center-align">
                 <li class="col m4"><a href="#">GiantBomb API</a></li>
                 <li class="col m4"><a href="#">Wikipedia API</a></li>
