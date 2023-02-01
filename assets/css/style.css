@@ -17,7 +17,7 @@
     color: var(--mario-red);
     padding: 3%;
 }
-/* label focus color -- issues with the color */
+
 input[type=text]:focus + label {
     color: #000;
   }
