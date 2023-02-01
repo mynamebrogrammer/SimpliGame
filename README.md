@@ -12,6 +12,7 @@ Features:
 ---
 ## Table of Contents
 
+- [Installation](#installation)
 - [How it Works](#how-it-works)
 - [Usage](#usage)
 - [Credits](#credits)
